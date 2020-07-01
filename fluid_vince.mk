@@ -24,6 +24,11 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 # Inherit some common fluidOS stuff.
 $(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
+# flags for fluid gapps variant
+TARGET_INCLUDE_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := fluid_vince
