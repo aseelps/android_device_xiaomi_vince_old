@@ -22,16 +22,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
 # Inherit some common fluidOS stuff.
-$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # flags for fluid gapps variant
 TARGET_INCLUDE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
 IS_PHONE := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
-PRODUCT_NAME := fluid_vince
+PRODUCT_NAME := aosp_vince
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 5 Plus
